@@ -1,0 +1,32 @@
+@import url(../../../styles/App.scss);
+
+.active{
+  border: $line-width-2 solid $main-color;
+}
+
+.sideBar{
+  left: 40px;
+  width:124px;
+  height:216px;
+  top:50%;
+  margin-top:-108px;
+  ul{
+    li{
+      font-size: $font-size-14;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 3px;
+      margin:5px 0;
+      height:40px;
+      width:120px;
+      font-weight:800;
+      line-height:40px;
+      color: #fff;
+    }
+    .active{
+      border: $line-width-2 solid $main-color;
+    }
+  }
+}
