@@ -1,5 +1,6 @@
 # resume
-personal resume
+## (http://39.108.72.242/)
+点击上方预览
 ## 安装所有包
 
 ```
@@ -17,3 +18,4 @@ $ npm start
 ```
 $ npm run build
 ``
+##暂不支持手机版
