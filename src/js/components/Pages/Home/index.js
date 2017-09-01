@@ -8,8 +8,9 @@ class Home extends Component{
     };
     render(){
         const { name,text } = this.state;
+        const { isPC } = this.props;
         return(
-            <div className="pr">
+            <div className={"pr "+`${isPC? styles.cont:styles.contPhone}`}>
                 <div className={"bg gray "+styles.bg}></div>
                 <div className="black pa"></div>
                 <section>

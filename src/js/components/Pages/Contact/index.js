@@ -4,13 +4,13 @@ import styles from './index.scss'
 class Contact extends Component{
 
     render(){
-
+        const { isPC } = this.props;
         return(
             <div className="pr">
                 <div className={"bg gray "+styles.bg}></div>
                 <div className="black pa"></div>
                 <section>
-                    <div className={"pa "+ styles.cont}>
+                    <div className={"pa "+ `${isPC ? styles.cont : styles.contPhone}`}>
                         <h1>CONTACT <br/>
                             <b>FOR ME</b></h1>
                         <ul>

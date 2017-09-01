@@ -78,3 +78,77 @@
     }
   }
 }
+.contPhone{
+  width: 80%;
+  margin: 100px auto auto auto;
+  h1{
+    text-align: left;
+    color: $main-color;
+    font-size: $font-size-40;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  ul{
+    margin-bottom: 10px;
+    .qk{
+      background-image: url("../../../../images/qk-logo.png");
+      background-size: 20% auto;
+      span{
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../../../../images/qk-code.png");
+      }
+    }
+    .yj{
+      background-image: url("../../../../images/yj-logo.png");
+    }
+    li{
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      height: 200px;
+      float: left;
+      margin: 0 0 20px 0;
+      border-radius: 6px;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size:80% auto ;
+      background-position: center;
+      background-color: $white-color;
+      &>div{
+        text-align: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all .3s ease-in-out;
+        div{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: $black-color;
+          opacity: 0.3;
+        }
+        span{
+          display: block;
+          width: 80%;
+          height:80%;
+          margin: 10%;
+        }
+        a{
+          position: absolute;
+          bottom: 0;
+          color: $black-color;
+          display: block;
+          height: 40%;
+          width: 100%;
+          font-size: $font-size-20;
+          line-height: 84px;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

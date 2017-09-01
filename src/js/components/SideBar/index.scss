@@ -30,3 +30,49 @@
     }
   }
 }
+.sideBarPhone{
+  width:100%;
+  height:44px;
+  background: $main-color;
+  i{
+    display: block;
+    border-radius: 2px;
+    margin: 20px;
+    width:34px;
+    height:4px;
+    background: $white-color;
+    &:before,
+    &:after{
+      content: "";
+      position: absolute;
+      width:34px;
+      height:4px;
+      border-radius: 2px;
+      background: $white-color;
+
+    }
+    &:before{
+      top:10px;
+    }
+    &:after{
+      bottom: 10px;
+    }
+  }
+  ul{
+    top: 44px;
+    li{
+      font-size: $font-size-14;
+      background: $black-color;
+      opacity:.5;
+      height:44px;
+      width:100%;
+      padding-left: 20px;
+      font-weight:800;
+      line-height:44px;
+      color: $white-color;
+    }
+    .active{
+      border:none;
+    }
+  }
+}

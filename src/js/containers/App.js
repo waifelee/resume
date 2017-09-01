@@ -7,6 +7,7 @@ import Store from '../store/store'
 
 import SideBar from '../components/SideBar/index'
 import Pages from '../components/Pages/index'
+import ScrollAnimation from '../components/ScrollAnimation/index'
 
 import '../../styles/App.scss'
 export default class App extends Component {
@@ -67,7 +68,6 @@ export default class App extends Component {
             document.onmousewheel = this.scrollFun.bind(this);
         }
         if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|wOSBrowser|BrowserNG|WebOS)/i))) {
-            alert("请要电脑观看");
             this.setState({
                 isPC: false
             })
@@ -80,13 +80,17 @@ export default class App extends Component {
 
     }
     render(){
-        const { items,top,i } = this.state;
+        const { items,top,i,isPC } = this.state;
         return (
             <div className={"pr h100"}>
-                <Pages top={top} />
+                <Pages top={top}
+                       isPC={isPC}
+                />
                 <SideBar items={items}
                          clicked={i}
+                         isPC={isPC}
                 />
+                <ScrollAnimation isPC={isPC} />
             </div>
         )
     }

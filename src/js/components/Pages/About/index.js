@@ -4,8 +4,7 @@ import styles from './index.scss'
 class About extends Component{
     state = {
         name: "WaiFu",
-        text: ["1989.02.09","不想全栈的前端不是好的设计师"],
-        userImage: "../../../../images/user.png",
+        text: ["1989.02.09","good good study,day day up"],
         about: {
             title: ["WEB","ENGINNEER"],
             cont: ["熟悉使用HTML5、CSS3、JS，能准确还原设计稿，提升兼容性,友好性和易用性",
@@ -17,22 +16,25 @@ class About extends Component{
     };
     render(){
         const { name,text,about } = this.state;
+        const { isPC } = this.props;
         return(
             <div className="pr">
                 <div className={"bg gray "+styles.bg}></div>
                 <div className="black pa"></div>
                 <section>
-                    <div className={"pa "+styles.cont}>
+                    <div className={"pa "+`${isPC ? styles.cont : styles.contPhone}`}>
                         <div className={styles.left}>
                             <div>
                                 <div className={"pa gray bg "+styles.bg2}>
                                     <div className="black pr"></div>
                                 </div>
-                                <div className={"pa "+styles.text}>
+                                {isPC? <div className={"pa "+styles.text}>
                                     <h2>{name}</h2>
                                     <p>{text[0]}<br/>
                                         {text[1]}</p>
-                                </div>
+                                </div> :
+                                null}
+
                             </div>
                         </div>
                         <div className={styles.right}>

@@ -8,13 +8,13 @@ import Contact from './Contact'
 
 class Pages extends Component{
     render(){
-        const { top } = this.props;
+        const { top,isPC } = this.props;
         return(
             <div className="pa h100 content" style={{top: `${top}px`}}>
-                <Home />
-                <About />
-                <Works />
-                <Contact />
+                <Home isPC={isPC} />
+                <About isPC={isPC} />
+                <Works isPC={isPC} />
+                <Contact isPC={isPC} />
             </div>
         )
     }
