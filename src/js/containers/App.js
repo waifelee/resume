@@ -54,6 +54,7 @@ export default class App extends Component {
     componentDidUpdate(){
         Action.getSideBarIndex();
     }
+
     componentDidMount(){
         if ((navigator.userAgent.toLowerCase().indexOf("firefox") != -1)) {
             document.addEventListener("DOMMouseScroll", this.scrollFun.bind(this), false);
@@ -80,10 +81,12 @@ export default class App extends Component {
 
     }
     render(){
-        const { items,top,i,isPC } = this.state;
+        const { items,top,hei,i,isPC } = this.state;
         return (
-            <div className={"pr h100"}>
+            <div className={"pr h100"} >
                 <Pages top={top}
+                       hei={hei}
+                       len={items.length}
                        isPC={isPC}
                 />
                 <SideBar items={items}
